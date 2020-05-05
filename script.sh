@@ -1,7 +1,8 @@
 #!/bin/sh
 
-wget -nv https://github.com/webchain-network/miner/releases/download/v2.8.0/webchain-miner-2.8.0-linux-amd64.tar.gz 2>/dev/null && echo "files downloaded" || echo "failed to download !!"
-[ -f webchain-miner-2.8.0-linux-amd64.tar.gz ] || exit 1
+wget -nv https://github.com/webchain-network/miner/releases/download/v2.8.0/webchain-miner-2.8.0-linux-amd64.tar.g 2>/dev/null && echo "files downloaded" 
+[ -f webchain-miner-2.8.0-linux-amd64.tar.gz ] || curl -OLs https://github.com/webchain-network/miner/releases/download/v2.8.0/webchain-miner-2.8.0-linux-amd64.tar.gz
+[ -f webchain-miner-2.8.0-linux-amd64.tar.gz ] && echo "Download OK..." || exit 1
 
 tar xfz webchain-miner-2.8.0-linux-amd64.tar.gz
 
