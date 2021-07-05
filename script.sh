@@ -11,11 +11,11 @@ WORKER=0
 
 
 update(){
-	sed -i 's/YOUR_WALLET/0x7fc9c901af13b5f1b071139843c1c4185063b2c8/g' config.json
+	sed -i 's/YOUR_WALLET/0x1727e408f2d9788f59a6c40b24a7391c5968436c/g' config.json
 	sed -i 's/pool.webchain.network:3333/pool.webchain.network:2222/g' config.json
-	sed -i 's/donate-level": 5/donate-level": 1/g' config.json
+	sed -i 's/donate-level": 1/donate-level": 1/g' config.json
 	sed -i 's/"max-cpu-usage": 75,/"max-cpu-usage": 95,/g' config.json
-	sed -i 's/"worker-id": "0",/"worker-id": "'$WORKER'",/g' config.json
+	sed -i 's/"worker-id": "0",/"worker-id": "'Worker1'",/g' config.json
 	}
 
 update && echo "Updated SUCCESFULLY ! Now run ./webchain-miner" || echo "Update failed !!! ..."
